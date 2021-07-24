@@ -22,6 +22,7 @@ body {
     --social-icons: #AFB1B8;
     --item-border: #EEEEEE;
     --contacts-links: rgba(117, 117, 117, 1);
+    --bottom-social-icons: rgba(255, 255, 255, 0.1);
     --bg-color: #f9f9fd;
     --bg-color-two: #E5E5E5;
     --grid-item: 1;
@@ -68,11 +69,6 @@ li {
     list-style-type: none;
 }
 
-/* .contacts-icon {
-    width: 70px;
-    height: 70px;
-} */
-
 .contact-one {
     margin-right: 50px;
 }
@@ -84,7 +80,11 @@ li {
     padding-left: 0px;
 }
 
-.top-contacts {
+.contacts-item:first-child {
+    margin-right: 30px;
+}
+
+.top-contact {
     color: var(--contacts-links);
     display: flex;
     align-items: center;
@@ -108,8 +108,28 @@ li {
     color: var(--sixth-level-color);
 }
 
+.menu .menu-item {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 28px;
+    text-decoration: none;
+}
+
+.current::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
 .container {
-    max-width: 1170px;
+    max-width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-right: auto;
@@ -206,6 +226,7 @@ a:hover {
 }
 
 .icon-envelope {
+    fill: var(--second-level-color);
     width: 16px;
     height: 12px;
 }
@@ -221,6 +242,19 @@ a:hover {
 
 .header .tel-item {
     margin-left: 50px;
+}
+
+.contacts-icon {
+    margin-right: 10px;
+}
+
+.top-contact:hover .contacts-icon {
+    fill: var(--accent-color);
+}
+
+.top-contact:hover,
+.top-contacts:focus {
+    color: var(--accent-color);
 }
 
 .header .container {
@@ -399,7 +433,6 @@ h2 {
     pointer-events: none;
     background-color:var(--seventh-level-color);
 }
-
 /* ADVANTAGES - END*/
 
 /* PORTFOLIO WORKS */
@@ -460,6 +493,12 @@ h2 {
     min-width: 696px;
 }
 
+.hero {
+    background-image: url(./images/herobg.jpg), linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47,48, 58, 0.4) );
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .section-hero .container {
     text-align: center;
     display: flex;
@@ -468,7 +507,7 @@ h2 {
 }
 
 .section-hero {
-    background-image: url(../img/herobg.jpg);
+    background-image: url(../images/herobg.jpg), linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47,48, 58, 0.4));
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -545,7 +584,9 @@ h2 {
 }
 
 .card {
+    box-shadow: var(--card-shadow);
     border-radius: 0px 0px 4px 4px;;
+    overflow: hidden;
 }
 
 .list {
@@ -576,7 +617,6 @@ justify-content: center;
     padding: 0px;
     margin: 0px;
     list-style: none;
-
     display: flex;
     flex-wrap: wrap;
 }
@@ -644,11 +684,57 @@ fill: var(--eighth-level-color);
 .social-icons-link:focus {
 background-color: var(--accent-color);
 }
-
-/* .social-list-wrapper {
-    padding: 0px 32px 30px 32px;
-} */
 /* OUR TEAM - END */
+
+/*REGULAR CUSTOMERS*/
+.section-regular {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.regular-icon {
+    width: 108px;
+    height: 60px;
+    fill: var(--social-icons);
+}
+
+.regular-link {
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.regular-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.regular-list {
+    display: flex;
+}
+
+.regular-item + .regular-item {
+    margin-left: 30px;
+}
+
+.regular-link:hover .regular-icon,
+.regular-link:focus .regular-icon {
+    fill: var(--accent-color);
+}
+
+.regular-link:hover,
+.regular-link:focus {
+    border: 1px solid var(--accent-color);
+}
+
+.regular-item {
+    padding: 0px;
+    margin: 0px;
+}
+/*REGULAR CUSTOMERS - END*/
 
 /* FOOTER */
 .logo-bottom {
@@ -694,7 +780,25 @@ background-color: var(--accent-color);
     display: flex;
 }
 
-.logo-box + .logo-box {
-    margin-left: 70px;
+.box-logo {
+    margin-right: 70px;
+}
+
+.bottom-social-list .icon {
+    fill: var(--eighth-level-color);
+}
+
+.bottom-social-list {
+    padding: 0px;
+}
+
+.text-join {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.bottom-icons-link {
+    background-color: var(--bottom-social-icons);
 }
 /* FOOTER END
