@@ -475,6 +475,12 @@ h2 {
     border-bottom: 1px solid var(--item-border);
     border-left: 1px solid var(--item-border);
 }
+
+.portfolio-card:hover {
+    box-shadow: var(--card-shadow);
+    border-radius: 0px 0px 4px 4px;;
+    overflow: hidden;
+}
 /* PORTFOLIO WORKS - END */
 
 /*SECTION HERO*/
