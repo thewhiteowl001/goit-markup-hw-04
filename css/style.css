@@ -212,6 +212,7 @@ a:hover {
 }
 
 .icon-phone {
+    fill: var(--second-level-color);
     width: 10px;
     height: 16px;
 }
@@ -684,6 +685,35 @@ background-color: var(--accent-color);
     fill: var(--social-icons);
 }
 
+.regular-one {
+    width: 41px;
+    height: 47px;
+}
+
+.regular-two {
+    width: 38.5px;
+    height: 34px;
+}
+
+.regular-three {
+    width: 43.5px;
+    height: 41.2px;
+}
+
+.regular-four {
+    width: 84.5px;
+    height: 40.6px;
+}
+
+.regular-five {
+    width: 62.5px;
+    height: 45.4px;
+}
+
+.regular-six {
+    width: 93.8px;
+    height: 44px;
+}
 .regular-link {
     width: 170px;
     height: 92px;
